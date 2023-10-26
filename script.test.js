@@ -41,3 +41,14 @@ describe('Calculator Sub', () => {
     expect(calculator.sub(1, 'a')).toBeNull();
   });
 });
+
+describe('Calculator Divide', () => {
+  it('should return the division of two numbers', () => {
+    expect(calculator.sub(4, 2)).toBe(2);
+  });
+  it('should handle NaN', () => {
+    expect(calculator.sub('a', 1)).toBeNull();
+    expect(calculator.sub('a', 'a')).toBeNull();
+    expect(calculator.sub(1, 'a')).toBeNull();
+  });
+});
