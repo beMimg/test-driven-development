@@ -53,7 +53,7 @@ describe('Calculator Divide', () => {
   });
 });
 
-describe('Calculator Divide', () => {
+describe('Calculator Multiply', () => {
   it('should return the multiplication of two numbers', () => {
     expect(calculator.multiply(4, 2)).toBe(8);
   });
