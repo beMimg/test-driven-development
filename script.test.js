@@ -1,7 +1,7 @@
 const capitalizeFirstLetter = require('./capitalize.js');
 const reverseString = require('./reverseString');
 const calculator = require('./calculator');
-const ceaserCipher = require('./ceaserCipher');
+const caeserCipher = require('./caeserCipher');
 
 describe('Capitalize', () => {
   it('should return first letter capitalized', () => {
@@ -65,20 +65,20 @@ describe('Calculator Multiply', () => {
   });
 });
 
-describe('Ceaser Cipher', () => {
+describe('Caeser Cipher', () => {
   it('should return shifted string with 1 shift factor', () => {
-    expect(ceaserCipher('z', 1)).toMatch('a');
+    expect(caeserCipher('z', 1)).toMatch('a');
   });
   it('should return shifted string with 2 shift factor', () => {
-    expect(ceaserCipher('z', 2)).toMatch('b');
+    expect(caeserCipher('z', 2)).toMatch('b');
   });
   it('should return shifted string with 3 shift factor', () => {
-    expect(ceaserCipher('z', 1)).toMatch('c');
+    expect(caeserCipher('z', 1)).toMatch('c');
   });
   it('should return null if shift factor is negative', () => {
-    expect(ceaserCipher('z', 1)).toBeNull();
+    expect(caeserCipher('z', 1)).toBeNull();
   });
   it('should return the same string if shift factor in undefined', () => {
-    expect(ceaserCipher('z')).toBe('z');
+    expect(caeserCipher('z')).toBe('z');
   });
 });
