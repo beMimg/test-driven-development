@@ -5,7 +5,7 @@ function caeserCipher(word, factor) {
     return null;
   }
   if (!factor) {
-    fator = 0;
+    factor = 0;
   }
   for (let i = 0; i < word.length; i++) {
     const letter = word[i];
