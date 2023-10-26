@@ -2,6 +2,7 @@ const capitalizeFirstLetter = require('./capitalize.js');
 const reverseString = require('./reverseString');
 const calculator = require('./calculator');
 const caeserCipher = require('./caeserCipher');
+const analyzeArray = require('./analyzeArray');
 
 describe('Capitalize', () => {
   it('should return first letter capitalized', () => {
@@ -80,5 +81,36 @@ describe('Caeser Cipher', () => {
   });
   it('should return the same string if shift factor in undefined', () => {
     expect(caeserCipher('z')).toMatch('z');
+  });
+});
+
+describe('Analyze Array', () => {
+  it('should return properties if an array of numbers is given', () => {
+    const numbers = [1, 8, 3, 4, 2, 6];
+    const result = analyzeArray(numbers);
+    expect(result).toStrictEqual({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    });
+  });
+
+  it('should handle empty array', () => {
+    const numbers = [];
+    const result = analyzeArray(numbers);
+    expect(result).toBeNull();
+  });
+
+  it('should handle an array with NaN', () => {
+    const numbers = ['test'];
+    const result = analyzeArray(numbers);
+    expect(result).toBeNull();
+  });
+
+  it('should handle a non-array', () => {
+    const numbers = 'test';
+    const result = analyzeArray(numbers);
+    expect(result).toBeNull();
   });
 });
