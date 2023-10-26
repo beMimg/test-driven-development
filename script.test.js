@@ -47,8 +47,8 @@ describe('Calculator Divide', () => {
     expect(calculator.sub(4, 2)).toBe(2);
   });
   it('should handle NaN', () => {
-    expect(calculator.sub('a', 1)).toBeNull();
-    expect(calculator.sub('a', 'a')).toBeNull();
-    expect(calculator.sub(1, 'a')).toBeNull();
+    expect(calculator.divide('a', 1)).toBeNull();
+    expect(calculator.divide('a', 'a')).toBeNull();
+    expect(calculator.divide(1, 'a')).toBeNull();
   });
 });
