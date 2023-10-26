@@ -8,3 +8,12 @@ describe('Capitalize', () => {
     expect(capitalizeFirstLetter(1)).toBeNull();
   });
 });
+
+describe('Reverse String', () => {
+  it('should return reverse string', () => {
+    expect(reverseString('string')), toBe('gnirts');
+  });
+  it('should handle numbers', () => {
+    expect(reverseString(1)).toBeNull();
+  });
+});
