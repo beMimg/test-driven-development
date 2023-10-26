@@ -17,3 +17,5 @@ function caeserCipher(word, factor) {
   }
   return encryptedWord;
 }
+
+module.exports = caeserCipher;
