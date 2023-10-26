@@ -76,7 +76,7 @@ describe('Caeser Cipher', () => {
     expect(caeserCipher('z', 1)).toMatch('c');
   });
   it('should return null if shift factor is negative', () => {
-    expect(caeserCipher('z', 1)).toBeNull();
+    expect(caeserCipher('z', -1)).toBeNull();
   });
   it('should return the same string if shift factor in undefined', () => {
     expect(caeserCipher('z')).toBe('z');
