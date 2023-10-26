@@ -44,11 +44,22 @@ describe('Calculator Sub', () => {
 
 describe('Calculator Divide', () => {
   it('should return the division of two numbers', () => {
-    expect(calculator.sub(4, 2)).toBe(2);
+    expect(calculator.divide(4, 2)).toBe(2);
   });
   it('should handle NaN', () => {
     expect(calculator.divide('a', 1)).toBeNull();
     expect(calculator.divide('a', 'a')).toBeNull();
     expect(calculator.divide(1, 'a')).toBeNull();
+  });
+});
+
+describe('Calculator Divide', () => {
+  it('should return the multiplication of two numbers', () => {
+    expect(calculator.multiply(4, 2)).toBe(8);
+  });
+  it('should handle NaN', () => {
+    expect(calculator.multiply('a', 1)).toBeNull();
+    expect(calculator.multiply('a', 'a')).toBeNull();
+    expect(calculator.multiply(1, 'a')).toBeNull();
   });
 });
