@@ -102,7 +102,7 @@ describe('Analyze Array', () => {
     expect(result).toBeNull();
   });
 
-  it('should handle an array with NaN', () => {
+  it('should handle an array with a string', () => {
     const numbers = ['test'];
     const result = analyzeArray(numbers);
     expect(result).toBeNull();
